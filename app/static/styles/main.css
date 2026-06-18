@@ -106,3 +106,31 @@ body {
     font-size: 50px;
     font-weight: 700;
 }
+
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px 60px 24px;
+}
+
+.about-section {
+    background-color: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.about-section h2 {
+    color: #1d539f;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.about-section p {
+    color: #333333;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0;
+}
