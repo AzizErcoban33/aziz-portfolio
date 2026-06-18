@@ -77,6 +77,39 @@ HOBBIES = [
     },
 ]
 
+PLACES_VISITED = [
+    {
+        "name": "Dublin, Ireland",
+        "description": "Where I study at Trinity College Dublin.",
+        "latitude": 53.3498,
+        "longitude": -6.2603,
+    },
+    {
+        "name": "Nicosia, Cyprus",
+        "description": "A place connected to my home and personal background.",
+        "latitude": 35.1856,
+        "longitude": 33.3823,
+    },
+    {
+        "name": "Kyrenia, Cyprus",
+        "description": "One of the beautiful coastal places I enjoy in Cyprus.",
+        "latitude": 35.3403,
+        "longitude": 33.3192,
+    },
+    {
+        "name": "Berlin, Germany",
+        "description": "One of the places I have visited in Germany.",
+        "latitude": 52.5200,
+        "longitude": 13.4050,
+    },
+    {
+        "name": "Athens, Greece",
+        "description": "One of the places I have visited in Greece.",
+        "latitude": 37.9838,
+        "longitude": 23.7275,
+    },
+]
+
 NAV_LINKS = [
     {
         "name": "Home",
@@ -106,6 +139,7 @@ def index():
         experiences=EXPERIENCES,
         education_items=EDUCATION_ITEMS,
         hobbies=HOBBIES,
+        places_visited=PLACES_VISITED,
     )
 
 

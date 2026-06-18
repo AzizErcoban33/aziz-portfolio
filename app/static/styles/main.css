@@ -236,6 +236,19 @@ body {
     padding-top: 40px;
 }
 
+.map-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+#travel-map {
+    height: 420px;
+    width: 100%;
+    border-radius: 12px;
+}
+
 @media (max-width: 700px) {
     .nav-content {
         flex-direction: column;
