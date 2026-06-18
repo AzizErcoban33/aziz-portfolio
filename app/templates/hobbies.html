@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Aziz Ercoban Hobbies">
+    <meta property="og:description" content="A dedicated page for my hobbies">
+    <meta property="og:url" content="{{ url }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <header class="nav-bar">
+        <div class="nav-content">
+            <a href="{{ url_for('index') }}">
+                <div class="nav-logo">
+                    <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="MLH Fellowship logo" />
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main class="content hobbies-page">
+        <section class="about-section">
+            <h2>My Hobbies</h2>
+            <p>
+                These are some of the things I enjoy outside of university and software engineering.
+                They reflect my curiosity, creativity, and personality.
+            </p>
+        </section>
+
+        <section class="portfolio-section">
+            <div class="card-grid">
+                {% for hobby in hobbies %}
+                <article class="info-card hobby-card">
+                    <img class="hobby-image" src="{{ url_for('static', filename='img/' ~ hobby.image) }}" alt="{{ hobby.name }}">
+                    <div class="hobby-content">
+                        <h3>{{ hobby.name }}</h3>
+                        <p>{{ hobby.description }}</p>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+
+            <div class="section-actions">
+                <a class="button-link" href="{{ url_for('index') }}">Back to homepage</a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
