@@ -77,6 +77,24 @@ HOBBIES = [
     },
 ]
 
+NAV_LINKS = [
+    {
+        "name": "Home",
+        "endpoint": "index",
+    },
+    {
+        "name": "Hobbies",
+        "endpoint": "hobbies_page",
+    },
+]
+
+
+@app.context_processor
+def inject_nav_links():
+    return {
+        "nav_links": NAV_LINKS
+    }
+
 
 @app.route('/')
 def index():

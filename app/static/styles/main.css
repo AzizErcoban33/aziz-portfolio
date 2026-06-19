@@ -5,7 +5,7 @@ p, h1, h2, h3, h4, h5, h6, button {
 body {
     background-color: #f5f5f9;
     background-size: cover;
-    width: auto; 
+    width: auto;
     overflow-x: hidden;
     font-family: "Roboto", serif;
     margin: 0px;
@@ -13,22 +13,24 @@ body {
 
 .nav-bar {
     width: 100%;
-    display: inline-block;
+    display: block;
     background-color: #1C539F;
     font-family: "Roboto", serif;
     font-weight: 700 !important;
-    padding-top: 10px;
+    padding: 10px 0;
 }
 
-.nav-content .logo-touch-target {
-    display: inline-flex;
-    height: 60%;
-    width: 350px;
+.nav-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.nav-content .nav-logo {
-    height: 60px;
-    margin: auto;
+.logo-link {
+    text-decoration: none;
 }
 
 .nav-logo {
@@ -41,12 +43,23 @@ body {
     width: 200px;
 }
 
-.nav-content nav {
-    display: block;
-    width: 100%;
-    text-align: right;
-    padding-top: 0px;
-    padding-right: 0px;
+.nav-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 999px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.18);
 }
 
 .profile {
@@ -58,9 +71,9 @@ body {
 }
 
 .profile h1 {
-        font-size: 50px;
-        font-weight: 700;
-        color: white;
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
 }
 
 .profile-subtitle {
@@ -71,16 +84,16 @@ body {
 }
 
 .profile img {
-        border-radius: 50%;
-        width: 190px;
-        height: 190px;
-        object-fit: cover;
-        object-position: center;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        padding: 6px;
-        background-color: white;
+    border-radius: 50%;
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    object-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 6px;
+    background-color: white;
 }
 
 .profile .profile-picture {
@@ -95,8 +108,8 @@ body {
 }
 
 .banner .logo {
-    max-width:180px;
-    max-height:60px;
+    max-width: 180px;
+    max-height: 60px;
     width: auto;
     height: auto;
 }
@@ -106,7 +119,6 @@ body {
     font-size: 50px;
     font-weight: 700;
 }
-
 
 .content {
     max-width: 1000px;
@@ -134,7 +146,6 @@ body {
     line-height: 1.7;
     margin: 0;
 }
-
 
 .portfolio-section {
     margin-top: 32px;
@@ -186,7 +197,6 @@ body {
     margin-bottom: 10px;
 }
 
-
 .hobby-card {
     padding: 0;
     overflow: hidden;
@@ -202,8 +212,6 @@ body {
 .hobby-content {
     padding: 24px;
 }
-
-
 
 .section-actions {
     margin-top: 24px;
@@ -228,6 +236,17 @@ body {
     padding-top: 40px;
 }
 
+@media (max-width: 700px) {
+    .nav-content {
+        flex-direction: column;
+        gap: 12px;
+    }
 
+    .profile h1 {
+        font-size: 38px;
+    }
 
-
+    .profile-subtitle {
+        font-size: 17px;
+    }
+}

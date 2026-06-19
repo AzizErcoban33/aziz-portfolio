@@ -21,11 +21,20 @@
 <body>
     <header class="nav-bar">
         <div class="nav-content">
-            <a href="{{ url_for('index') }}">
+            <a class="logo-link" href="{{ url_for('index') }}">
                 <div class="nav-logo">
-                    <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="MLH Fellowship logo" />
+                    <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="MLH Fellowship logo">
                 </div>
             </a>
+
+            <nav class="nav-links">
+                {% for link in nav_links %}
+                <a class="{% if request.endpoint == link.endpoint %}active{% endif %}"
+                    href="{{ url_for(link.endpoint) }}">
+                    {{ link.name }}
+                </a>
+                {% endfor %}
+            </nav>
         </div>
     </header>
 
@@ -42,7 +51,9 @@
             <div class="card-grid">
                 {% for hobby in hobbies %}
                 <article class="info-card hobby-card">
-                    <img class="hobby-image" src="{{ url_for('static', filename='img/' ~ hobby.image) }}" alt="{{ hobby.name }}">
+                    <img class="hobby-image"
+                        src="{{ url_for('static', filename='img/' ~ hobby.image) }}"
+                        alt="{{ hobby.name }}">
                     <div class="hobby-content">
                         <h3>{{ hobby.name }}</h3>
                         <p>{{ hobby.description }}</p>
