@@ -202,3 +202,32 @@ body {
 .hobby-content {
     padding: 24px;
 }
+
+
+
+.section-actions {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.button-link {
+    display: inline-block;
+    background-color: #1d539f;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 22px;
+    border-radius: 999px;
+}
+
+.button-link:hover {
+    background-color: #163f78;
+}
+
+.hobbies-page {
+    padding-top: 40px;
+}
+
+
+
+
