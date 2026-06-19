@@ -134,3 +134,54 @@ body {
     line-height: 1.7;
     margin: 0;
 }
+
+
+.portfolio-section {
+    margin-top: 32px;
+}
+
+.portfolio-section h2 {
+    color: #1d539f;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.info-card h3 {
+    color: #1d539f;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.info-card h4 {
+    color: #333333;
+    font-size: 17px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.card-meta {
+    color: #6b7280 !important;
+    font-size: 14px !important;
+    font-weight: 700;
+    margin-bottom: 10px;
+}

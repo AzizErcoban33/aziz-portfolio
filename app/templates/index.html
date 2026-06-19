@@ -43,6 +43,46 @@
             <h2>About Me</h2>
             <p>{{ about_text }}</p>
         </section>
+
+        <section class="portfolio-section">
+            <h2>Work Experience</h2>
+            <div class="card-grid">
+                {% for experience in experiences %}
+                <article class="info-card">
+                    <p class="card-meta">{{ experience.dates }}</p>
+                    <h3>{{ experience.role }}</h3>
+                    <h4>{{ experience.company }}</h4>
+                    <p>{{ experience.description }}</p>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <h2>Education</h2>
+            <div class="card-grid">
+                {% for education in education_items %}
+                <article class="info-card">
+                    <p class="card-meta">{{ education.dates }}</p>
+                    <h3>{{ education.school }}</h3>
+                    <h4>{{ education.degree }}</h4>
+                    <p>{{ education.description }}</p>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <h2>Hobbies</h2>
+            <div class="card-grid">
+                {% for hobby in hobbies %}
+                <article class="info-card">
+                    <h3>{{ hobby.name }}</h3>
+                    <p>{{ hobby.description }}</p>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
     </main>
     
 </body>
