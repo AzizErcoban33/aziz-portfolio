@@ -54,16 +54,28 @@ def index():
 
     hobbies = [
         {
-            "name": "Gym and Fitness",
-            "description": "I enjoy training consistently and improving my strength, discipline, and health.",
+            "name": "Traveling",
+            "description": (
+                "I enjoy visiting new places, experiencing different cultures, and learning "
+                "from the cities and countries I travel to."
+            ),
+            "image": "travel.jpeg",
         },
         {
-            "name": "Travel",
-            "description": "I like exploring new places, cultures, and cities whenever I get the chance.",
+            "name": "Coding & Projects",
+            "description": (
+                "I like turning ideas into real software projects and improving them step by step "
+                "while learning new technologies."
+            ),
+            "image": "project.jpeg",
         },
         {
-            "name": "Building Projects",
-            "description": "I enjoy turning ideas into real software projects and learning by doing.",
+            "name": "Animals",
+            "description": (
+                "I enjoy spending time around animals and I like how they bring calmness, energy, "
+                "and personality into everyday life."
+            ),
+            "image": "animal.jpeg",
         },
     ]
 

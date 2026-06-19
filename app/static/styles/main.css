@@ -185,3 +185,20 @@ body {
     font-weight: 700;
     margin-bottom: 10px;
 }
+
+
+.hobby-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.hobby-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.hobby-content {
+    padding: 24px;
+}

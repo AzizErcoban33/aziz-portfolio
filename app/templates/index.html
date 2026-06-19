@@ -76,13 +76,17 @@
             <h2>Hobbies</h2>
             <div class="card-grid">
                 {% for hobby in hobbies %}
-                <article class="info-card">
-                    <h3>{{ hobby.name }}</h3>
-                    <p>{{ hobby.description }}</p>
+                <article class="info-card hobby-card">
+                    <img class="hobby-image" src="{{ url_for('static', filename='img/' ~ hobby.image) }}" alt="{{ hobby.name }}">
+                    <div class="hobby-content">
+                        <h3>{{ hobby.name }}</h3>
+                        <p>{{ hobby.description }}</p>
+                    </div>
                 </article>
                 {% endfor %}
             </div>
         </section>
+        
     </main>
     
 </body>
