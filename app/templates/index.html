@@ -32,9 +32,10 @@
 
     <div class="profile">
         <div id="profile-picture" class="profile-picture">
-            <img src="./static/img/logo.jpg">
+            <img src="{{ url_for('static', filename='img/aziz-profile.jpeg') }}" alt="Photo of Aziz Ercoban">
         </div>
         <h1>{{ title }}</h1>
+        <p class="profile-subtitle">Computer Science student at Trinity College Dublin</p>
     </div>
 </body>
 </html>
